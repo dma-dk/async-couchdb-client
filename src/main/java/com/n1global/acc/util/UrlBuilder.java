@@ -17,7 +17,7 @@ public class UrlBuilder {
 
     public UrlBuilder addPathSegment(String pathSegment) {
         try {
-            prefix += "/" + UriUtils.encodePathSegment(pathSegment, "UTF-8");
+            prefix += "/" + URLEncoder.encode(pathSegment, "UTF-8");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
