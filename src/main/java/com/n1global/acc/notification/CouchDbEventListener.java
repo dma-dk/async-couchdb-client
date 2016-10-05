@@ -96,7 +96,8 @@ public abstract class CouchDbEventListener<D extends CouchDbDocument> implements
         if (asyncHandler == null) {
             JavaType docType = TypeFactory.defaultInstance().findTypeParameters(getClass(), CouchDbEventListener.class)[0];
 
-            JavaType eventType = TypeFactory.defaultInstance().constructParametrizedType(CouchDbEvent.class, CouchDbEvent.class, docType);
+//            JavaType eventType = TypeFactory.defaultInstance().constructParametrizedType(CouchDbEvent.class, CouchDbEvent.class, docType);
+            JavaType eventType = TypeFactory.defaultInstance().constructParametricType(CouchDbEvent.class, docType);
 
             UrlBuilder urlBuilder = new UrlBuilder(db.getDbUrl()).addPathSegment("_changes")
                                                                  .addQueryParam("feed", "continuous")
