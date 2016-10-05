@@ -114,8 +114,9 @@ public final class CouchDbDesignDocument extends CouchDbDocument {
         CouchDbDesignDocument other = (CouchDbDesignDocument)obj;
 
         if (views.equals(other.views)
-            && filters.equals(other.filters)
-            && updatesHandlers.equals(other.updatesHandlers)) return true;
+                && filters.equals(other.filters)
+                && updatesHandlers.equals(other.updatesHandlers)
+                && Objects.equals(validateDocUpdate, other.validateDocUpdate)) return true;
 
         return false;
     }
