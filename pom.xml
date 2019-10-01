@@ -112,15 +112,6 @@
     </dependency>
   </dependencies>
 
-
-  <distributionManagement>
-    <repository>
-      <id>dma-release-repository</id>
-      <name>DMA cloudbees Releases</name>
-      <url>dav:https://repository-dma.forge.cloudbees.com/release/</url>
-    </repository>
-  </distributionManagement>
-
   <build>
     <extensions>
       <extension>
